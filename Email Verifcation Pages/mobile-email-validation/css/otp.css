@@ -1,0 +1,982 @@
+/* ============================================
+   OTP Verification Page Styles
+   Based on Figma Design Tokens
+   ============================================ */
+
+/* Design Tokens – aligned with Figma variables */
+:root {
+  /* Colors (Figma neutrals + brand) */
+  --neutrals-tubw-800: #262626;
+  --neutrals-tubw-600: #595959;
+  --neutrals-tubw-400: #BFBFBF;
+  --neutrals-tubw-200: #D9D9D9;
+  --neutrals-tubw-50: #FAFAFA;
+  --neutrals-tubw-white: #FFFFFF;
+  --neutrals-tubw-black: #000000;
+  --otp-color-primary-blue: #00A6CA;
+  --otp-color-text-dark: #262626;
+  --otp-color-text-medium: #595959;
+  --otp-color-text-light: #BFBFBF;
+  --otp-color-border: #D9D9D9;
+  --otp-color-white: #FFFFFF;
+  --otp-color-black: #000000;
+  --otp-color-success: #008A00;
+  --otp-color-button-orange: #F16E00;
+  --otp-color-button-text: #2C2C2C;
+  --otp-color-bg-input: #FAFAFA;
+
+  /* Shadows */
+  --otp-shadow-card: 0px 12px 40px 0px rgba(0, 67, 81, 0.08);
+
+  /* Spacing */
+  --otp-spacing-xs: 4px;
+  --otp-spacing-sm: 8px;
+  --otp-spacing-md: 16px;
+  --otp-spacing-lg: 24px;
+  --otp-spacing-xl: 40px;
+
+  /* Border Radius */
+  --otp-radius-sm: 4px;
+  --otp-radius-md: 8px;
+  --otp-radius-lg: 16px;
+  --otp-radius-xl: 25px;
+
+  /* Typography */
+  --otp-font-intro-bold: 'Intro', sans-serif;
+  --otp-font-intro-regular: 'IntroRegular', sans-serif;
+  --otp-font-intro-semibold: 'IntroSemiBold', sans-serif;
+  --otp-font-roboto-semibold: 'Roboto', sans-serif;
+
+  /* Figma: page background gradient – white to light blue (subtle gradient) */
+  --otp-bg-gradient: linear-gradient(180deg, #FFFFFF 0%, #F7F9FA 30%, #E8F7FA 100%);
+}
+
+/* Figma: gradient background for full viewport */
+html {
+  min-height: 100%;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F7F9FA 30%, #E8F7FA 100%) !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F7F9FA 30%, #E8F7FA 100%) !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-color: #E8F7FA;
+}
+
+.otp-verification-wrapper {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F7F9FA 30%, #E8F7FA 100%) !important;
+  font-family: var(--otp-font-intro-regular);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 100px;
+}
+
+/* Content Area */
+.otp-content-area {
+  padding: 0 var(--otp-spacing-xl);
+  max-width: 694px;
+  margin: 0 auto;
+  padding-top: 138px;
+}
+
+/* Page Title */
+.otp-page-title {
+  font-family: var(--otp-font-intro-bold);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--otp-color-text-dark);
+  margin: 0 0 var(--otp-spacing-sm) 0;
+  font-feature-settings: 'ss01';
+}
+
+/* Page Subtitle */
+.otp-page-subtitle {
+  font-family: var(--otp-font-intro-regular);
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--otp-color-text-medium);
+  letter-spacing: 0.28px;
+  margin: 0 0 var(--otp-spacing-xl) 0;
+}
+
+/* Main Container - White Card */
+.otp-main-container {
+  background: var(--otp-color-white);
+  border-radius: var(--otp-radius-md);
+  box-shadow: var(--otp-shadow-card);
+  padding: var(--otp-spacing-xl);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Step Section */
+.otp-step-section {
+  display: flex;
+  gap: var(--otp-spacing-md);
+  align-items: flex-start;
+  position: relative;
+}
+
+.otp-step-section:not(:last-child) {
+  margin-bottom: 0;
+}
+
+/* Hide step indicator (number and line) when only one step is visible */
+.otp-main-container:has(.otp-step-section:only-of-type) .otp-step-indicator-column,
+.otp-main-container.single-step .otp-step-indicator-column {
+  display: none !important;
+}
+
+.otp-main-container:has(.otp-step-section:only-of-type) .otp-step-section,
+.otp-main-container.single-step .otp-step-section {
+  gap: 0;
+}
+
+.otp-main-container:has(.otp-step-section:only-of-type) .otp-step-content-wrapper,
+.otp-main-container.single-step .otp-step-content-wrapper {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+/* Step Indicator Column */
+.otp-step-indicator-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 22px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.otp-step-number-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 2px;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.otp-step-number-container {
+  width: 18px;
+  height: 18px;
+  border-radius: var(--otp-radius-lg);
+  border: 1px solid var(--otp-color-text-light);
+  background: var(--otp-color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.otp-step-number-container.otp-step-active {
+  border-color: var(--otp-color-primary-blue);
+}
+
+.otp-step-number {
+  font-family: var(--otp-font-roboto-semibold);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 0;
+  color: var(--otp-color-text-light);
+  text-align: center;
+  width: 10px;
+  height: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.otp-step-number-container.otp-step-active .otp-step-number {
+  color: var(--otp-color-primary-blue);
+}
+
+.otp-step-line {
+  width: 1px;
+  background: var(--otp-color-text-light);  /* Gray by default when verifying */
+  margin-top: 0;
+  flex: 1 1 0;
+  min-height: 176px;
+  align-self: stretch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Line turns blue when step 1 is verified */
+.otp-step-section.otp-step-verified .otp-step-line {
+  background: var(--otp-color-primary-blue);
+}
+
+/* Show line only for non-last steps - line should always show if there's a next step */
+.otp-step-section:not(:last-child) .otp-step-line {
+  display: block;
+}
+
+.otp-step-section:last-child .otp-step-line {
+  display: none;
+}
+
+/* Don't hide line when collapsed - line should still connect */
+.otp-step-collapsed .otp-step-line {
+  display: block;
+}
+
+/* Step Content Wrapper */
+.otp-step-content-wrapper {
+  flex: 1 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--otp-spacing-sm);
+  padding-bottom: var(--otp-spacing-xl);
+  min-width: 0;
+  position: relative;
+}
+
+.otp-step-section:not(:last-child) .otp-step-content-wrapper {
+  padding-bottom: var(--otp-spacing-xl);
+}
+
+.otp-step-section:last-child .otp-step-content-wrapper {
+  padding-bottom: 0;
+}
+
+.otp-step-collapsed .otp-step-content-wrapper {
+  padding-bottom: 0;
+}
+
+/* Ensure line extends to match step content height */
+.otp-step-section:not(:last-child) .otp-step-indicator-column {
+  align-self: stretch;
+}
+
+.otp-step-section:not(:last-child) .otp-step-line {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+/* Step Header */
+.otp-step-header {
+  font-family: var(--otp-font-intro-bold);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--otp-color-text-dark);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.otp-step-header-collapsed {
+  font-family: var(--otp-font-intro-semibold);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--otp-color-text-medium);
+}
+
+/* Step Details */
+.otp-step-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--otp-spacing-md);
+  width: 100%;
+  max-width: 532px;
+  margin-top: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Ensure proper spacing after OTP field wrapper */
+.otp-step-details .otp-field-wrapper {
+  margin-bottom: 0;
+}
+
+.otp-step-details .otp-resend-wrapper {
+  margin-top: 0;
+}
+
+.otp-step-info {
+  font-family: var(--otp-font-intro-regular);
+  font-size: 14px;
+  color: var(--otp-color-text-medium);
+  line-height: 20px;
+  letter-spacing: 0.28px;
+  margin: 0 0 0 0;
+}
+
+/* OTP Field Wrapper */
+.otp-field-wrapper {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 532px;
+  flex-shrink: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-direction: row; /* Desktop: input group and button side by side */
+}
+
+/* Desktop: hide resend wrapper inside field wrapper */
+.otp-field-wrapper .otp-resend-wrapper {
+  display: none;
+}
+
+/* Desktop: show button inside field wrapper */
+.otp-field-wrapper .otp-verify-button-desktop {
+  display: flex !important;
+}
+
+/* Desktop: hide mobile button outside */
+.otp-verify-button-mobile {
+  display: none !important;
+}
+
+/* Desktop: show resend wrapper outside */
+.otp-resend-wrapper-outside {
+  display: flex;
+}
+
+/* OTP Input Group */
+.otp-input-group {
+  display: flex;
+  gap: 12px;
+  flex: 0 1 auto;
+  min-width: 0;
+  width: 360px;
+  max-width: 360px;
+  align-items: flex-start;
+}
+
+/* OTP Input Field */
+.otp-input-field {
+  flex: 1 0 0;
+  min-width: 0;
+  height: 44px;
+  border: 1px solid var(--otp-color-border);
+  border-radius: var(--otp-radius-sm);
+  text-align: center;
+  font-size: 14px;
+  font-family: var(--otp-font-intro-semibold);
+  font-weight: 600;
+  color: var(--otp-color-text-dark);
+  background: var(--otp-color-white);
+  outline: none;
+  letter-spacing: 0.28px;
+  padding: 11px 6px 9px 6px;
+  line-height: 20px;
+  transition: border-color 0.2s, background-color 0.2s;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.otp-input-field:focus {
+  border-color: var(--otp-color-primary-blue);
+  background: var(--otp-color-white);
+}
+
+.otp-input-field:disabled {
+  background: var(--otp-color-bg-input);
+  color: var(--otp-color-text-medium);
+  cursor: not-allowed;
+}
+
+/* Verify Button – Figma: orange, white text */
+.otp-verify-button {
+  background: var(--otp-color-button-orange);
+  border: none;
+  color: #FFFFFF;
+  font-family: var(--otp-font-intro-bold);
+  font-weight: 700;
+  padding: 12px 32px;
+  border-radius: var(--otp-radius-xl);
+  cursor: pointer;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.28px;
+  line-height: normal;
+  height: 44px;
+  white-space: nowrap;
+  transition: background-color 0.2s, opacity 0.2s;
+  flex-shrink: 0;
+  min-width: 160px;
+  max-width: 160px;
+  width: 160px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  align-self: flex-start;
+}
+
+
+.otp-verify-button:hover:not(.otp-verify-button-disabled) {
+  opacity: 0.9;
+}
+
+.otp-verify-button-disabled {
+  background: var(--otp-color-text-light);
+  color: var(--otp-color-text-medium);
+  cursor: not-allowed;
+}
+
+/* Resend Wrapper */
+.otp-resend-wrapper {
+  font-family: var(--otp-font-intro-regular);
+  font-size: 14px;
+  color: var(--otp-color-black);
+  line-height: 20px;
+  letter-spacing: 0.28px;
+  display: flex;
+  gap: var(--otp-spacing-xs);
+  align-items: center;
+  width: 360px;
+}
+
+.otp-resend-text {
+  font-family: var(--otp-font-intro-regular);
+}
+
+.otp-timer {
+  font-family: var(--otp-font-intro-bold);
+  font-weight: 700;
+  color: var(--otp-color-text-dark);
+}
+
+.otp-resend-link {
+  color: var(--otp-color-primary-blue);
+  cursor: pointer;
+  text-decoration: underline;
+  font-family: var(--otp-font-intro-semibold);
+  text-decoration-skip-ink: none;
+  margin-left: auto;
+}
+
+/* Verified State */
+.otp-step-section.otp-step-verified .otp-step-number-container {
+  background: var(--otp-color-primary-blue);
+  border-color: var(--otp-color-primary-blue);
+}
+
+.otp-step-section.otp-step-verified .otp-step-number {
+  color: var(--otp-color-white);
+}
+
+/* Hide OTP input fields, verify button, and resend timer when verified (Step 1 only) */
+.otp-step-section#otp-mobile-container.otp-step-verified .otp-field-wrapper {
+  display: none;
+}
+
+/* Step 2: Show OTP fields when verified (filled state) */
+.otp-step-section#otp-email-container.otp-step-verified .otp-field-wrapper {
+  display: flex;
+}
+
+.otp-step-section.otp-step-verified .otp-resend-wrapper {
+  display: none;
+}
+
+/* Hide info text when verified (Step 1 only) */
+.otp-step-section#otp-mobile-container.otp-step-verified .otp-step-info {
+  display: none;
+}
+
+/* Show info text for Step 2 when verified */
+.otp-step-section#otp-email-container.otp-step-verified .otp-step-info {
+  display: block;
+}
+
+/* Show verified badge in header row - Step 1 only */
+.otp-step-section#otp-mobile-container.otp-step-verified .otp-verified-badge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+/* Step 2: Verified badge - desktop: positioned next to OTP fields */
+.otp-step-section#otp-email-container.otp-step-verified .otp-verified-badge-step2 {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  margin-left: auto;
+  /* Desktop: position absolutely below fields */
+  position: absolute;
+  right: 0;
+  /* Position at the OTP input fields row level */
+  top: 67px;
+  height: 44px;
+}
+
+.otp-verified-badge {
+  display: none;
+}
+
+.otp-verified-icon {
+  width: 24px;
+  height: 24px;
+  background: var(--otp-color-success);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--otp-color-white);
+  font-size: 14px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.otp-verified-text {
+  font-family: var(--otp-font-intro-bold);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--otp-color-success);
+  text-transform: uppercase;
+  letter-spacing: 0.28px;
+  line-height: normal;
+}
+
+/* Verified OTP input fields (read-only, filled state) */
+.otp-input-field.otp-input-verified {
+  background: var(--otp-color-white);
+  color: var(--otp-color-text-medium);
+  border-color: var(--otp-color-border);
+  cursor: default;
+  pointer-events: none;
+}
+
+/* Hide verify button when verified */
+.otp-step-section.otp-step-verified .otp-verify-button {
+  display: none !important;
+}
+
+/* Hide buttons when verified - more specific selectors */
+.otp-step-section.otp-step-verified .otp-verify-button-desktop,
+.otp-step-section.otp-step-verified .otp-verify-button-mobile,
+.otp-step-section.otp-step-verified .otp-step-details .otp-verify-button-mobile,
+.otp-step-section.otp-step-verified .otp-field-wrapper .otp-verify-button-desktop,
+.otp-button-verified-hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Error State */
+.otp-input-field.otp-input-error {
+  border-color: #EB0000;
+  animation: shake 0.3s;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+.otp-error-message {
+  font-family: var(--otp-font-intro-regular);
+  font-size: 16px;
+  color: #EB0000;
+  line-height: 24px;
+  margin: var(--otp-spacing-xs) 0 0 0;
+}
+
+/* Footer */
+.otp-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: transparent;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 14px;
+  color: var(--otp-color-black);
+}
+
+.otp-footer-copyright {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.28px;
+  color: var(--otp-color-black);
+  margin: 0 0 12px 0;
+  font-variation-settings: 'wdth' 100;
+}
+
+.otp-footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 0;
+}
+
+.otp-footer-link {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.28px;
+  color: var(--otp-color-text-dark);
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  font-variation-settings: 'wdth' 100;
+}
+
+.otp-footer-link:hover {
+  opacity: 0.8;
+}
+
+/* ============================================
+   Mobile responsive – Figma mobile frames
+   ============================================ */
+@media screen and (max-width: 768px) {
+  .otp-verification-wrapper {
+    padding-bottom: 0;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F7F9FA 30%, #E8F7FA 100%) !important;
+  }
+
+  /* Figma: 56px top, 20px side, 40px bottom */
+  .otp-content-area {
+    padding: 56px 20px 40px;
+    max-width: 100%;
+    margin: 0;
+    background: transparent;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  /* Single-step mobile: button at bottom of viewport */
+  .otp-content-area.single-step {
+    padding-bottom: 20px;
+  }
+
+  .otp-main-container.single-step {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0;
+  }
+
+  .otp-main-container.single-step .otp-step-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .otp-main-container.single-step .otp-step-content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0;
+  }
+
+  .otp-main-container.single-step .otp-step-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--otp-spacing-md);
+  }
+
+  .otp-main-container.single-step .otp-field-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--otp-spacing-sm);
+    flex-shrink: 0;
+  }
+
+  .otp-main-container.single-step .otp-input-group {
+    flex-shrink: 0;
+  }
+
+  .otp-main-container.single-step .otp-step-details > .otp-verify-button {
+    margin-top: auto;
+  }
+
+  .otp-page-title {
+    font-size: 18px;
+    margin-bottom: var(--otp-spacing-xs);
+  }
+
+  .otp-page-subtitle {
+    font-size: 13px;
+    line-height: 18px;
+    margin-bottom: var(--otp-spacing-lg);
+  }
+
+  .otp-main-container {
+    padding: 0 20px var(--otp-spacing-md);
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+
+  /* Figma mobile: no footer */
+  .otp-footer {
+    display: none;
+  }
+
+  .otp-step-section {
+    gap: var(--otp-spacing-sm);
+  }
+
+  /* Mobile: Hide indicator when single step */
+  .otp-main-container.single-step .otp-step-section {
+    gap: 0;
+  }
+
+  .otp-step-indicator-column {
+    width: 20px;
+  }
+
+  .otp-main-container.single-step .otp-step-indicator-column {
+    display: none !important;
+  }
+
+  .otp-step-number-container {
+    width: 16px;
+    height: 16px;
+  }
+
+  .otp-step-number {
+    font-size: 10px;
+  }
+
+  .otp-step-line {
+    display: none !important;
+  }
+
+  .otp-step-content-wrapper {
+    padding-bottom: var(--otp-spacing-lg);
+  }
+
+  .otp-step-header,
+  .otp-step-header-collapsed {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .otp-step-details {
+    max-width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  .otp-field-wrapper {
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    gap: var(--otp-spacing-sm);
+    overflow: hidden;
+    box-sizing: border-box;
+    align-items: flex-start;
+  }
+
+  /* Mobile: hide desktop button inside field wrapper */
+  .otp-field-wrapper .otp-verify-button-desktop {
+    display: none !important;
+  }
+
+  /* Mobile: show resend wrapper inside field wrapper (below inputs) */
+  .otp-field-wrapper .otp-resend-wrapper {
+    display: flex;
+    margin-top: 0;
+    width: 100%;
+    order: 2; /* After input group */
+  }
+
+  /* Mobile: input group comes first */
+  .otp-field-wrapper .otp-input-group {
+    order: 1;
+  }
+
+  /* Mobile: show mobile button outside field wrapper */
+  .otp-verify-button-mobile {
+    display: flex !important;
+    width: 100%;
+  }
+
+  /* Mobile: hide resend wrapper outside (it's now inside) */
+  .otp-resend-wrapper-outside {
+    display: none;
+  }
+
+  .otp-input-group {
+    width: 100%;
+    max-width: 100%;
+    gap: 6px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .otp-input-field {
+    flex: 1 1 0;
+    min-width: 0;
+    width: 0; /* Force flex to calculate width properly */
+    height: 44px;
+    font-size: 13px;
+    box-sizing: border-box;
+  }
+
+  .otp-verify-button {
+    width: 100%;
+    min-width: unset;
+    max-width: none;
+    align-self: stretch;
+  }
+
+  .otp-resend-wrapper {
+    width: 100%;
+    font-size: 13px;
+  }
+
+  /* Mobile: Step 2 verified badge on same line as heading */
+  .otp-step-section#otp-email-container.otp-step-verified .otp-verified-badge-step2 {
+    position: static !important;
+    margin-top: 0;
+    margin-left: auto;
+    height: auto;
+    top: auto;
+    right: auto;
+  }
+
+  /* Ensure Step 2 header shows badge inline (same as Step 1) */
+  .otp-step-section#otp-email-container.otp-step-verified .otp-step-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .otp-footer {
+    padding: 16px var(--otp-spacing-md);
+  }
+
+  .otp-footer-copyright,
+  .otp-footer-link {
+    font-size: 12px;
+  }
+
+  .otp-footer-links {
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .otp-content-area {
+    padding: 56px 20px 40px;
+  }
+
+  .otp-page-title {
+    font-size: 24px;
+  }
+
+  .otp-page-subtitle {
+    /* font-size: 14px;
+    margin-bottom: var(--otp-spacing-md); */
+
+    color: var(--neutrals-tubw-600, #595959);
+    font-family: Intro;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: 0.28px;
+    font-family: IntroRegular;
+  }
+
+
+  .otp-main-container {
+    padding: 0 20px var(--otp-spacing-md);
+  }
+
+  .otp-step-line {
+    display: none !important;
+  }
+
+  .otp-input-group {
+    gap: 4px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .otp-input-field {
+    height: 40px;
+    font-size: 12px;
+    padding: 8px 2px;
+    width: 0; /* Force flex to calculate width properly */
+    box-sizing: border-box;
+  }
+
+  .otp-verify-button {
+    height: 40px;
+    font-size: 12px;
+    padding: 10px 20px;
+  }
+
+  .otp-step-info {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .otp-verified-text {
+    font-size: 12px;
+  }
+
+  .otp-verified-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .otp-content-area {
+    padding: 56px 20px 40px;
+  }
+
+  .otp-main-container {
+    padding: 0 20px var(--otp-spacing-md);
+  }
+
+  .otp-step-indicator-column {
+    width: 18px;
+  }
+
+  .otp-step-number-container {
+    width: 14px;
+    height: 14px;
+  }
+
+  .otp-step-number {
+    font-size: 9px;
+  }
+}

@@ -1,0 +1,105 @@
+/*-----------------------------------------------------------------------------------
+header-list-item
+ Project Name: New Project
+ Project URI: http://
+ Description:
+ Author:
+ Author URI:
+ Version: 1.0.0
+
+-----------------------------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+
+ == Table Of Content
+
+ 00 Imports
+ 01 Basics
+
+
+---------------------------------------------------------------- */
+
+/* 00. Imports */
+@import 'variables',
+// 'mixins',
+// '_reset',
+'_home';
+// '_normalize';
+
+
+//Start Basics
+
+* {
+  box-sizing: border-box;
+  list-style: none;
+  outline: none;
+  word-wrap: break-word;
+}
+
+body {
+  color: $black;
+  font-family: $roboto;
+  font-size: 14px;
+  overflow-x: hidden;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+span,
+a,
+a:hover {
+  color: inherit;
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* Start Basics ends */
+.primary-btn {
+  background-color: #f16e00;
+  color: #2c2c2c;
+  font-family: "IntroRegular";
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  padding: 19px 40px 15px;
+  border-radius: 25px;
+  text-transform: uppercase;
+  font-weight: 600;
+  white-space: nowrap;
+
+  @media(max-width:1199px) {
+    margin-left: 15px;
+    font-size: 15px;
+  }
+
+  @media(max-width: 575px) {
+    font-size: 12px;
+    line-height: 19px;
+    padding: 10px 40px;
+  }
+
+  &.yellow {
+    background-color: $cta_yellow;
+  }
+}
+
+.primary-btn:hover {
+  text-decoration: none;
+  color: #2c2c2c;
+}
+
+@media (max-width: 992px) {
+  .desktop-view {
+    display: none !important;
+  }
+}
+
+@media (min-width: 993px) {
+  .mobile-view {
+    display: none !important;
+  }
+}

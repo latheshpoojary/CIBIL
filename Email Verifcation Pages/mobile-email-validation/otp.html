@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>OTP Verification | Cibil</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/scss/main.css">
+  <link rel="stylesheet" href="./css/otp.css">
+</head>
+
+<body>
+  <div class="otp-verification-wrapper">
+    <!-- Content: OTP Verification -->
+    <div id="otp-section" class="otp-content-area">
+      <h1 class="otp-page-title">Verify your Contact Details.</h1>
+      <p class="otp-page-subtitle">We have sent different OTPs to your registered mobile number and email address to verify that these details belong to you.</p>
+
+      <div class="otp-main-container">
+        <!-- Mobile OTP Section -->
+        <div id="otp-mobile-container" class="otp-step-section">
+          <div class="otp-step-indicator-column">
+            <div class="otp-step-number-wrapper">
+              <div class="otp-step-number-container otp-step-active">
+                <span class="otp-step-number">1</span>
+              </div>
+            </div>
+            <div class="otp-step-line"></div>
+          </div>
+          
+          <div class="otp-step-content-wrapper">
+            <h2 class="otp-step-header">Mobile OTP Verification</h2>
+            <div class="otp-step-details">
+              <p class="otp-step-info">We have sent the OTP to 70234***** with refer CIBI231034</p>
+              <div class="otp-field-wrapper">
+                <div class="otp-input-group">
+                  <input type="text" class="otp-input-field" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                  <input type="text" class="otp-input-field" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                  <input type="text" class="otp-input-field" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                  <input type="text" class="otp-input-field" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                  <input type="text" class="otp-input-field" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                  <input type="text" class="otp-input-field" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                </div>
+                <button class="otp-verify-button otp-verify-button-disabled otp-verify-button-desktop" disabled>VERIFY OTP</button>
+                <div class="otp-resend-wrapper">
+                  <span class="otp-resend-text">Resend OTP in</span>
+                  <span class="otp-timer">00:30</span>
+                </div>
+              </div>
+              <button class="otp-verify-button otp-verify-button-disabled otp-verify-button-mobile" disabled>VERIFY OTP</button>
+              <div class="otp-resend-wrapper otp-resend-wrapper-outside">
+                <span class="otp-resend-text">Resend OTP in</span>
+                <span class="otp-timer">00:30</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Email OTP Section -->
+        <div id="otp-email-container" class="otp-step-section otp-step-collapsed">
+          <div class="otp-step-indicator-column">
+            <div class="otp-step-number-wrapper">
+              <div class="otp-step-number-container">
+                <span class="otp-step-number">2</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="otp-step-content-wrapper">
+            <h2 class="otp-step-header otp-step-header-collapsed">Email OTP Verification</h2>
+            <div class="otp-step-details" style="display: none;">
+              <p class="otp-step-info">We have sent the OTP to aa******@gmail.com with refer CIBI231035</p>
+              <div class="otp-field-wrapper">
+                <div class="otp-input-group">
+                  <input type="text" class="otp-input-field" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                  <input type="text" class="otp-input-field" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                  <input type="text" class="otp-input-field" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                  <input type="text" class="otp-input-field" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                  <input type="text" class="otp-input-field" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                  <input type="text" class="otp-input-field" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                </div>
+                <button class="otp-verify-button otp-verify-button-disabled otp-verify-button-desktop" disabled>VERIFY OTP</button>
+                <div class="otp-resend-wrapper">
+                  <span class="otp-resend-text">Resend OTP in</span>
+                  <span class="otp-timer">00:30</span>
+                </div>
+              </div>
+              <button class="otp-verify-button otp-verify-button-disabled otp-verify-button-mobile" disabled>VERIFY OTP</button>
+              <div class="otp-resend-wrapper otp-resend-wrapper-outside">
+                <span class="otp-resend-text">Resend OTP in</span>
+                <span class="otp-timer">00:30</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="otp-footer">
+      <p class="otp-footer-copyright">© Copyright 2025 TransUnion CIBIL Limited (Formerly: Credit Information Bureau (India) Limited). All Rights Reserved.</p>
+      <div class="otp-footer-links">
+        <a href="#" class="otp-footer-link">FAQs</a>
+        <a href="#" class="otp-footer-link">Terms and Conditions</a>
+        <a href="#" class="otp-footer-link">Privacy Policy</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="./js/otp.js"></script>
+</body>
+
+</html>

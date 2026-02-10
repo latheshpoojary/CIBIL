@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Enquiry | Cibil</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/scss/main.css">
+  <link rel="stylesheet" href="./css/verification.css">
+</head>
+
+<body>
+  <div class="verification-container">
+    <!-- Header removed as per request -->
+
+    <!-- Content: Review Contact Details -->
+    <div id="review-section" class="content-area">
+      <h1 class="page-title" id="page-title">Review Your Contact Details</h1>
+      
+      <!-- Conflict Warning Banner -->
+      <div id="conflict-warning" class="conflict-warning conflict-warning--hidden">
+        <div class="conflict-warning-content">
+          <span class="conflict-warning-text" id="conflict-warning-text"></span>
+        </div>
+      </div>
+      
+      <p class="page-subtitle" id="page-subtitle">To ensure your security, we need to verify your email address and mobile number through different OTPs. Please confirm these details, as they cannot be modified later.</p>
+
+      <!-- Alternative Email Field (shown when current email is in use) -->
+      <div id="row-alternative-email" class="info-row info-row--hidden">
+        <label class="info-label">Add New Email Address <span class="required-indicator">(Required)</span></label>
+        <div class="info-value-container">
+          <input type="email" class="info-value" id="alternative-email-input" placeholder="Enter new email address" disabled>
+        </div>
+        <div class="error-message error-message--hidden" data-field="alternative-email">
+          <p class="error-message-text">Please enter a valid email address.</p>
+        </div>
+      </div>
+
+      <!-- Alternative Mobile Field (shown when current mobile is in use) -->
+      <div id="row-alternative-mobile" class="info-row info-row--hidden">
+        <label class="info-label">Add New Mobile Number <span class="required-indicator">(Required)</span></label>
+        <div class="info-value-container">
+          <input type="text" class="info-value" id="alternative-mobile-input" placeholder="Enter Mobile Number" disabled>
+        </div>
+        <div class="error-message error-message--hidden" data-field="alternative-mobile">
+          <p class="error-message-text">Please enter a valid mobile number.</p>
+        </div>
+      </div>
+
+      <div id="row-mobile" class="info-row">
+        <label class="info-label" id="mobile-label">Mobile Number</label>
+        <div class="info-value-container">
+          <input type="text" class="info-value" value="9879879870" disabled>
+          <a href="#" class="edit-link"><img src="./images/edit_icon.svg" class="edit-icon" alt=""><span class="edit-link-text">Edit</span></a>
+        </div>
+        <div class="edit-disclaimer edit-disclaimer--hidden" data-field="mobile">
+          <img src="./images/info_outline.svg" class="edit-disclaimer-icon" alt="">
+          <p class="edit-disclaimer-text">Updating your mobile number, will require us to check it in our records so we can get your latest CIBIL report.</p>
+        </div>
+        <div class="error-message error-message--hidden" data-field="mobile">
+          <p class="error-message-text">This mobile number is already verified, try another mobile number.</p>
+        </div>
+      </div>
+
+      <div id="row-email" class="info-row">
+        <label class="info-label">Email Address</label>
+        <div class="info-value-container">
+          <input type="text" class="info-value" value="johndoe@example.com" disabled>
+          <a href="#" class="edit-link"><img src="./images/edit_icon.svg" class="edit-icon" alt=""><span class="edit-link-text">Edit</span></a>
+        </div>
+        <div class="edit-disclaimer edit-disclaimer--hidden" data-field="email">
+          <img src="./images/info_outline.svg" class="edit-disclaimer-icon" alt="">
+          <p class="edit-disclaimer-text">Updating your email address, will require us to check it in our records so we can get your latest CIBIL report.</p>
+        </div>
+        <div class="error-message error-message--hidden" data-field="email">
+          <p class="error-message-text">This email address is already verified, try another email address.</p>
+        </div>
+      </div>
+
+      <button id="send-otp-btn" class="primary-btn">SEND OTP</button>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>© Copyright 2025 TransUnion CIBIL Limited (Formerly: Credit Information Bureau (India) Limited). All Rights Reserved.</p>
+      <div class="footer-links">
+        <a href="#">FAQs</a>
+        <a href="#">Terms and Conditions</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="./js/review-config-loader.js"></script>
+  <script src="./js/verification.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      initReviewConfigLoader().catch(console.error);
+    });
+  </script>
+</body>
+
+</html>

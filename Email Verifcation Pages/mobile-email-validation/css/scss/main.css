@@ -1,0 +1,68 @@
+/*-----------------------------------------------------------------------------------
+header-list-item
+ Project Name: New Project
+ Project URI: http://
+ Description:
+ Author:
+ Author URI:
+ Version: 1.0.0
+
+-----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+
+ == Table Of Content
+
+ 00 Imports
+ 01 Basics
+
+
+---------------------------------------------------------------- */
+/* 00. Imports */
+@font-face {
+  font-family: "Intro-Light";
+  src: url("../../fonts/Intro-Light.otf") format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "IntroRegular";
+  src: url("../../fonts/IntroRegular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "IntroSemiBold";
+  src: url("../../fonts/IntroSemiBold.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Intro";
+  src:
+    url("../../fonts/2CA963-0-0.woff2") format("woff2"),
+    url("../../fonts/2CA963-0-0.woff") format("woff"),
+    url("../../fonts/2CA963-0-0.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("../../fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Roboto-Semi";
+  src: url("../../fonts/Roboto-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../../fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+p {
+  margin-bottom: 0;
+}
