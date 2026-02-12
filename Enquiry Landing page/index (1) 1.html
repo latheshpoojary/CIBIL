@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Enquiry | Cibil</title>
+  <link rel="stylesheet" href="https://www.cibil.com/content/dam/cibil/consumer/enq26/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/scss/main.css">
+  <style>
+  /*-----------------------------------------------------------------------------------
+header-list-item
+ Project Name: New Project
+ Project URI: http://
+ Description:
+ Author:
+ Author URI:
+ Version: 1.0.0
+
+-----------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------
+
+ == Table Of Content
+
+ 00 Imports
+ 01 Basics
+
+
+---------------------------------------------------------------- */
+/* 00. Imports */
+@font-face {
+  font-family: "Intro-Light";
+  src: url("https://www.cibil.com/content/dam/cibil/consumer/enq26/font/Intro-Light.otf") format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "IntroRegular";
+  src: url("https://www.cibil.com/content/dam/cibil/consumer/enq26/font/IntroRegular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "IntroSemiBold";
+  src: url("https://www.cibil.com/content/dam/cibil/consumer/enq26/font/IntroSemiBold.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Intro";
+  src:
+    url("https://www.cibil.com/content/dam/cibil/consumer/enq26/font/2CA963-0-0.woff2") format("woff2"),
+    url("https://www.cibil.com/content/dam/cibil/consumer/enq26/font/2CA963-0-0.woff") format("woff"),
+    url("https://www.cibil.com/content/dam/cibil/consumer/enq26/font/2CA963-0-0.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("https://www.cibil.com/content/dam/cibil/consumer/enq26/font/Roboto-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Roboto-Semi";
+  src: url("https://www.cibil.com/content/dam/cibil/consumer/enq26/font/Roboto-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("https://www.cibil.com/content/dam/cibil/consumer/enq26/font/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.enquiry-banner {
+  padding: 50px 0;
+  background: url("https://www.cibil.com/content/dam/cibil/consumer/enq26/banner.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.enquiry-banner.commercial-banner {
+  background: linear-gradient(180deg, rgba(0, 67, 100, 0.44) 14.55%, rgba(0, 67, 100, 0.00) 69.31%), url(../../images/commercial\ banner.jpg) lightgray -852.666px 0.196px / 336.905% 99.969% no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.enquiry-banner.commercial-banner .banner-content .main-heading,
+.enquiry-banner.commercial-banner .banner-content .description {
+  color: #ffffff;
+}
+
+@media (max-width: 575px) {
+  .enquiry-banner {
+    background: url("https://www.cibil.com/content/dam/cibil/consumer/enq26/consumer-mobile-banner.png");
+    background-size: cover;
+    background-position: center;
+    padding: 48px 16px 0;
+    
+    height: 642px;
+    
+  }
+
+  .enquiry-banner.commercial-banner {
+    background: linear-gradient(180deg, #004364 0%, #004364 10%, rgba(0, 67, 100, 0.8) 40%, rgba(0, 67, 100, 0) 100%), url("../../images/commercial-mobile-banner.png");
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    min-height: 642px;
+  }
+}
+
+.enquiry-banner-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+@media (max-width: 575px) {
+  .enquiry-banner-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.enquiry-banner .banner-content {
+  max-width: 790px;
+  color: #ffffff;
+  z-index: 2;
+}
+
+.video-shower {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0px;
+}
+
+.video-shower div {
+  width: 790px;
+  height: 230px;
+  padding: 24px;
+  border-radius: 24px;
+  border: 1px solid #00a6ca;
+  background: #fff;
+
+  /* dropdown shadow */
+  box-shadow: 0 2px 20px 0 rgba(0, 34, 51, 0.1);
+  gap: 32px;
+}
+
+.video-shower div img {
+  height: 100%;
+  border-radius: 12px;
+}
+
+.video-shower div p {
+  font-family: "IntroRegular";
+}
+
+@media (max-width: 575px) {
+  .enquiry-banner .banner-content {
+    max-width: 328px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    /* margin-top: 92px; */
+  }
+
+  .video-shower {
+    padding: 16px;
+  }
+
+  .video-shower div {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 24px;
+    padding: 16px;
+
+  }
+}
+
+.enquiry-banner .banner-content .main-heading {
+  font-family: "IntroSemiBold";
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  line-height: 1.25;
+  color: #262626;
+}
+
+@media (max-width: 575px) {
+  .enquiry-banner .banner-content .main-heading {
+    font-size: 28px;
+    text-align: center;
+  }
+}
+
+.enquiry-banner .banner-content .description {
+  font-family: "IntroRegular";
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 32px;
+  color: #262626;
+}
+
+@media (max-width: 575px) {
+  .enquiry-banner .banner-content .description {
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+}
+
+.enquiry-banner .banner-content .description p {
+  margin: 12px 0;
+}
+
+.enquiry-banner .banner-content .description span {
+  font-family: "IntroSemiBold";
+}
+
+.enquiry-banner .banner-content .action-area .primary-btn {
+  margin-left: 0;
+}
+
+@media (max-width: 575px) {
+  .enquiry-banner .banner-content .action-area .primary-btn {
+    /* white-space: normal;
+    padding: 16px 40px;
+    width: auto;
+    max-width: 100%; */
+    color: #2C2C2C;
+    text-align: center;
+    font-family: Intro;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.28px;
+    text-transform: uppercase;
+    white-space: normal;
+  }
+}
+
+.enquiry-banner .banner-content .action-area .footnote {
+  font-size: 14px;
+  font-style: italic;
+  margin-top: 16px;
+  font-family: "IntroRegular";
+  color: #262626;
+}
+
+@media (max-width: 575px) {
+  .enquiry-banner .banner-content .action-area .footnote {
+    font-size: 12px;
+    text-align: center;
+  }
+}
+
+.enquiry-banner .video-trigger {
+  z-index: 2;
+}
+
+.enquiry-banner .video-trigger .play-button {
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.enquiry-banner .video-trigger .play-button:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.enquiry-banner .video-trigger .play-button .play-icon {
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 18px solid #ffffff;
+  margin-left: 6px;
+}
+
+.enquiry-section-title {
+  color: #000;
+  font-family: "Intro";
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  margin-bottom: 0;
+}
+
+@media (max-width: 575px) {
+  .enquiry-section-title {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.enquiry-section-description {
+  color: #262626;
+  font-family: "IntroRegular";
+  font-size: 18px;
+  line-height: 28px;
+  margin: 16px 0 48px;
+}
+
+@media (max-width: 575px) {
+  .enquiry-section-description {
+    font-size: 14px;
+    line-height: 20px;
+    margin: 16px 0 24px;
+  }
+}
+
+.enquiry-section-description.big {
+  font-size: 20px;
+  line-height: 28px;
+  margin-top: 0;
+}
+
+@media (max-width: 575px) {
+  .enquiry-section-description.big {
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 0;
+  }
+}
+
+.enquiry-features {
+  background-color: #fff;
+  padding: 80px 0;
+}
+
+@media (max-width: 575px) {
+  .enquiry-features {
+    padding: 40px 0;
+  }
+}
+
+.enquiry-features .enquiry-section-description {
+  /* text-align: center; */
+}
+
+@media (max-width: 575px) {
+  .enquiry-features .enquiry-section-description {
+    text-align: left;
+  }
+}
+
+.enquiry-belong {
+  background-color: #f7f9fa;
+  padding: 80px 120px;
+}
+
+@media (max-width: 575px) {
+  .enquiry-belong {
+    padding: 40px 0;
+  }
+}
+
+.enquiry-belong .enquiry-section-title {
+  margin-bottom: 32px;
+}
+
+@media (max-width: 575px) {
+  .enquiry-belong .enquiry-section-title {
+    margin-bottom: 24px;
+  }
+}
+
+.enquiry-belong-row {
+  display: flex;
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .enquiry-belong-row {
+    flex-wrap: wrap;
+  }
+}
+
+.enquiry-belong-item {
+  display: flex;
+  gap: 16px;
+  max-width: 33.333%;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .enquiry-belong-item {
+    gap: 12px;
+    max-width: 100%;
+  }
+}
+
+.enquiry-belong-item:not(:last-child) {
+  padding-right: 24px;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .enquiry-belong-item:not(:last-child) {
+    padding-right: 0;
+    border-right: none;
+  }
+}
+
+.enquiry-belong-item-icon {
+  min-width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f2f2fc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 575px) {
+  .enquiry-belong-item-icon {
+    min-width: 32px;
+    height: 32px;
+  }
+
+  .enquiry-belong-item-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.enquiry-belong-item-content-title {
+  font-family: "IntroSemiBold";
+  font-size: 18px;
+  line-height: 28px;
+  color: #262626;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 575px) {
+  .enquiry-belong-item-content-title {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 8px;
+  }
+}
+
+.enquiry-belong-item-content-desc {
+  font-family: "IntroRegular";
+  font-size: 16px;
+  line-height: 24px;
+  color: #595959;
+  margin-bottom: 0;
+}
+
+@media (max-width: 575px) {
+  .enquiry-belong-item-content-desc {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.enquiry-belong-item-content-desc a {
+  color: #00a6ca;
+  text-decoration: underline;
+}
+
+.enquiry-belong-item-content-desc a:hover {
+  color: #00a6ca;
+}
+
+.enquiry-blogs {
+  padding: 80px 0;
+}
+
+@media (max-width: 575px) {
+  .enquiry-blogs {
+    padding: 48px 0;
+  }
+}
+
+.enquiry-blogs-image {
+  overflow: hidden;
+  border-radius: 8px;
+  height: 192px;
+}
+
+.enquiry-blogs-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.enquiry-blogs-title {
+  color: #262626;
+  font-size: 20px;
+  line-height: 28px;
+  font-family: "IntroSemiBold";
+  margin: 24px 0 8px;
+}
+
+@media (max-width: 575px) {
+  .enquiry-blogs-title {
+    font-size: 16px;
+    line-height: 20px;
+    display: block;
+  }
+}
+
+.enquiry-blogs-desc {
+  color: #595959;
+  font-size: 18px;
+  line-height: 28px;
+  font-family: "IntroRegular";
+  margin-bottom: 8px;
+  max-height: 54px;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  /* autoprefixer: off */
+  -webkit-box-orient: vertical;
+  /* autoprefixer: on */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+}
+
+@media (max-width: 575px) {
+  .enquiry-blogs-desc {
+    font-size: 14px;
+    line-height: 20px;
+    min-height: inherit;
+  }
+}
+
+.enquiry-blogs-link {
+  font-size: 20px;
+  line-height: 30px;
+  font-family: "IntroRegular";
+  color: #00a6ca;
+}
+
+@media (max-width: 575px) {
+  .enquiry-blogs-link {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.enquiry-blogs-link:hover {
+  text-decoration: underline;
+  color: #00a6ca;
+}
+
+.enquiry-price {
+  padding: 80px 120px;
+  background-color: #f7f9fa;
+}
+
+@media (max-width: 575px) {
+  .enquiry-price {
+    padding: 80px 0;
+  }
+}
+
+.enquiry-price-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 482px;
+}
+
+@media (max-width: 768px) {
+  .enquiry-price-container {
+    max-width: 100%;
+  }
+}
+
+.enquiry-price-right {
+  padding: 24px 0;
+}
+
+.enquiry-price-extra {
+  margin-top: 16px;
+  font-size: 18px;
+  font-family: "IntroRegular";
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .enquiry-price-extra {
+    text-align: center;
+
+  }
+}
+
+@media (max-width: 575px) {
+  .enquiry-price-extra {
+    font-size: 16px;
+    margin-top: 30px;
+  }
+}
+
+.enquiry-price-extra a {
+  color: #00a6ca;
+  text-decoration: underline;
+}
+
+.enquiry-price-extra a:hover {
+  color: #00a6ca;
+  text-decoration: underline;
+}
+
+.enquiry-price-note {
+  background-color: #f1f6f9;
+  padding: 16px;
+  text-align: center;
+  font-size: 16px;
+  font-family: "IntroSemiBold";
+  color: #004364;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+@media (max-width: 575px) {
+  .enquiry-price-note {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 575px) {
+  .enquiry-price .primary-btn {
+    margin-left: 0;
+  }
+}
+
+.enquiry-price .price-card {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  border: 1px solid #d9d9d9;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 0;
+  background: #fff;
+  transition: border-color 0.2s ease;
+}
+
+.enquiry-price .price-card.recomm {
+  padding-top: 43px !important;
+}
+
+@media (max-width: 768px) {
+  .enquiry-price .price-card.recomm {
+    border: 2px solid #00a6ca;
+  }
+}
+
+.enquiry-price .price-card.recomm:hover,
+.enquiry-price .price-card.recomm:has(input:checked) {
+  padding-top: 42px !important;
+}
+
+@media (max-width: 768px) {
+  .enquiry-price .price-card .primary-btn {
+    margin-left: 0;
+    margin-top: 24px;
+    width: 100%;
+  }
+}
+
+.enquiry-price .price-card input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.enquiry-price .price-card .card-content {
+  display: flex;
+  gap: 12px;
+}
+
+.enquiry-price .price-card .text-details {
+  flex-grow: 1;
+}
+
+.enquiry-price .price-card .text-details .title {
+  font-size: 20px;
+  font-weight: 400;
+  color: #000;
+  margin: 0 0 2px 0;
+  font-family: "IntroSemiBold";
+}
+
+@media (max-width: 575px) {
+  .enquiry-price .price-card .text-details .title {
+    font-size: 16px;
+  }
+}
+
+.enquiry-price .price-card .text-details .subtitle {
+  font-size: 14px;
+  font-weight: 400;
+  color: #666;
+  margin: 0;
+  font-family: "IntroRegular";
+}
+
+.enquiry-price .price-card .price-section {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  color: #004364;
+}
+
+.enquiry-price .price-card .price-section .price {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1;
+  font-family: "IntroSemiBold";
+}
+
+@media (max-width: 575px) {
+  .enquiry-price .price-card .price-section .price {
+    font-size: 22px;
+  }
+}
+
+.enquiry-price .price-card .price-section .sub-price {
+  font-size: 12px;
+  margin-top: 4px;
+  font-family: "IntroSemiBold";
+}
+
+.enquiry-price .price-card .radio-circle {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #bfbfbf;
+  border-radius: 50%;
+  position: relative;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.enquiry-price .price-card .radio-circle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+.enquiry-price .price-card:hover,
+.enquiry-price .price-card:has(input:checked) {
+  box-shadow: 0 2px 20px 0 rgba(0, 34, 51, 0.1);
+  border: 2px solid #00a6ca;
+  padding: 23px;
+}
+
+@media (max-width: 768px) {
+
+  .enquiry-price .price-card:hover,
+  .enquiry-price .price-card:has(input:checked),
+  .enquiry-price .price-card.recomm {
+    border: 2px solid #00a6ca;
+    padding: 23px;
+    box-shadow: 0 2px 20px 0 rgba(0, 34, 51, 0.1);
+  }
+}
+
+.enquiry-price .price-card:has(input:checked) .radio-circle::after {
+  background-color: #00a6ca;
+}
+
+.enquiry-price .price-card .recommended-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #00a6ca;
+  color: white;
+  padding: 4px 16px;
+  font-size: 14px;
+  font-family: "IntroRegular";
+  border-radius: 0 14px 0 14px;
+}
+
+@media (max-width: 768px) {
+  .cibil-banner {
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .cibil-banner .banner-content {
+    margin-bottom: 40px;
+  }
+
+  .cibil-banner .banner-content .main-heading {
+    font-size: 32px;
+  }
+}
+
+.section-keywords-title {
+  font-family: "Intro";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33px;
+  text-align: center;
+  color: #000;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 575px) {
+  .section-keywords-title {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.section-keywords-row {
+  display: flex;
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .section-keywords-row {
+    flex-wrap: wrap;
+  }
+}
+
+.section-keywords-item {
+  display: flex;
+  gap: 16px;
+  max-width: 33.333%;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .section-keywords-item {
+    gap: 12px;
+    max-width: 100%;
+  }
+}
+
+.section-keywords-item:not(:last-child) {
+  padding-right: 24px;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .section-keywords-item:not(:last-child) {
+    padding-right: 0;
+    border-right: none;
+  }
+}
+
+.section-keywords-item-icon {
+  min-width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 575px) {
+  .section-keywords-item-icon {
+    min-width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 575px) {
+  .section-keywords-item-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.section-keywords-item-icon.yellow {
+  background-color: #fff9d9;
+}
+
+.section-keywords-item-icon.green {
+  background-color: #e0f6e9;
+}
+
+.section-keywords-item-icon.blue {
+  background-color: #f2f2fc;
+}
+
+.section-keywords-item-content-title {
+  font-family: "IntroSemiBold";
+  font-size: 18px;
+  line-height: 28px;
+  color: #262626;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 575px) {
+  .section-keywords-item-content-title {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 8px;
+  }
+}
+
+.section-keywords-item-content-desc {
+  font-family: "IntroRegular";
+  font-size: 16px;
+  line-height: 24px;
+  color: #595959;
+  margin-bottom: 0;
+}
+
+@media (max-width: 575px) {
+  .section-keywords-item-content-desc {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  list-style: none;
+  outline: none;
+  word-wrap: break-word;
+}
+
+body {
+  color: #262626;
+  font-family: "Roboto";
+  font-size: 14px;
+  overflow-x: hidden;
+}
+
+@media (max-width: 575px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+span,
+a,
+a:hover {
+  color: inherit;
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* Start Basics ends */
+.primary-btn {
+  background-color: #f16e00;
+  color: #2c2c2c;
+  font-family: "IntroRegular";
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  padding: 19px 40px 15px;
+  border-radius: 25px;
+  text-transform: uppercase;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+@media (max-width: 1199px) {
+  .primary-btn {
+    margin-left: 15px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 575px) {
+  .primary-btn {
+    font-size: 12px;
+    line-height: 19px;
+    padding: 10px 40px;
+  }
+}
+
+.primary-btn.yellow {
+  background-color: #fcd800;
+}
+
+.primary-btn:hover {
+  text-decoration: none;
+  color: #2c2c2c;
+}
+
+@media (max-width: 992px) {
+  .desktop-view {
+    display: none !important;
+  }
+}
+
+@media (min-width: 993px) {
+  .mobile-view {
+    display: none !important;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
+  
+  </style>
+</head>
+
+<body>
+  
+  
+  <main>
+    <section class="enquiry-banner">
+      <div class="container">
+        <div class="enquiry-banner-container">
+          <div class="banner-content">
+            <h1 class="main-heading">A lender checked your CIBIL Report</h1>
+            <div class="description">
+              <p>This is called a <span>Credit Enquiry</span>. It usually happens when you apply for a loan or credit
+                card.</p>
+              <p>If it wasn't you, reviewing your CIBIL Report is the best next step.</p>
+            </div>
+
+            <div class="action-area">
+              <a href="#pricing" class="primary-btn yellow">Check your credit profile</a>
+              <p class="footnote">Checking your CIBIL Report will not impact your score</p>
+            </div>
+          </div>
+
+          <!-- <div class="video-trigger">
+              <button class="play-button">
+                <span class="play-icon"></span>
+              </button>
+            </div> -->
+        </div>
+      </div>
+    </section>
+    <section class="enquiry-price">
+      <div class="container" id="pricing">
+        <div class="d-lg-block d-none">
+          <div class="row">
+            <div class="col-lg-6 col-12">
+              <div class="enquiry-price-container">
+                <label class="price-card recomm">
+                  <input type="radio" name="enquiry-plan" checked onchange="setCurrentTab('free')">
+                  <div class="card-content">
+                    <div class="radio-circle"></div>
+                    <div class="text-details">
+                      <h3 class="title">Free Annual CIBIL Report</h3>
+                      <p class="subtitle">Available once every calendar year</p>
+                    </div>
+                    <div class="price-section">
+                      <span class="price">₹0</span>
+                    </div>
+                  </div>
+                  <div class="recommended-badge">Recommended</div>
+                </label>
+
+                <label class="price-card">
+                  <input type="radio" name="enquiry-plan" onchange="setCurrentTab('starter')">
+                  <div class="card-content">
+                    <div class="radio-circle"></div>
+                    <div class="text-details">
+                      <h3 class="title">Starter Plan</h3>
+                      <p class="subtitle">Includes only Credit Report</p>
+                    </div>
+                    <div class="price-section">
+                      <span class="price">₹118</span>
+                      <span class="sub-price">one-time</span>
+                    </div>
+                  </div>
+                </label>
+
+                <label class="price-card" >
+                  <input type="radio" name="enquiry-plan" onchange="setCurrentTab('basic')">
+                  <div class="card-content">
+                    <div class="radio-circle"></div>
+                    <div class="text-details">
+                      <h3 class="title">Basic Subscription </h3>
+                      <p class="subtitle">CIBIL Score, Report & More</p>
+                    </div>
+                    <div class="price-section">
+                      <span class="price">₹550</span>
+                      <span class="sub-price">for 1 month</span>
+                    </div>
+                  </div>
+                </label>
+              </div>
+            </div>
+            <div class="col-lg-6 col-12">
+              <div class="enquiry-price-right">
+                <h2 class="enquiry-section-title">Don’t let a credit enquiry catch you off guard</h2>
+                <p class="enquiry-section-description">Most people check their CIBIL Report after a loan or credit card
+                  enquiry to stay informed and loan ready.</p>
+                <a href="https://myscore.cibil.com/CreditView/enrollShort_new.page?enterprise=CIBIL&offer=FACRA" class="primary-btn yellow" id="subscribe-btn" onclick="redirectTo()">Get started</a>
+                <p class="enquiry-price-extra">Already have a CIBIL account? <a href="https://myscore.cibil.com/CreditView/mobilelogin.page?enterprise=CIBIL">Log In</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-lg-none d-block">
+          <h2 class="enquiry-section-title">Don’t let a credit enquiry catch you off guard</h2>
+          <p class="enquiry-section-description">Most people check their CIBIL Report after an enquiry to stay loan
+            ready and informed.</p>
+          <div class="enquiry-price-container">
+            <div class="price-card recomm">
+              <div class="card-content">
+                <div class="text-details">
+                  <h3 class="title">Free Annual CIBIL Report</h3>
+                  <p class="subtitle">Available once every calendar year</p>
+                </div>
+                <div class="price-section">
+                  <span class="price">₹0</span>
+                </div>
+              </div>
+              <a href="https://myscore.cibil.com/CreditView/enrollShort_new.page?enterprise=CIBIL&offer=FACRA" class="primary-btn yellow">Get started</a>
+              <div class="recommended-badge">Recommended</div>
+            </div>
+
+            <div class="price-card">
+              <div class="card-content">
+                <div class="text-details">
+                  <h3 class="title">Starter Plan</h3>
+                  <p class="subtitle">Includes only Credit Report</p>
+                </div>
+                <div class="price-section">
+                  <span class="price">₹118</span>
+                  <span class="sub-price">one-time</span>
+                </div>
+              </div>
+              <a href="https://myscore.cibil.com/CreditView/enrollShort_new.page?enterprise=CIBIL&offer=1DPCIRO" class="primary-btn yellow">Get started</a>
+            </div>
+
+            <div class="price-card">
+              <div class="card-content">
+                <div class="text-details">
+                  <h3 class="title">Basic Subscription</h3>
+                  <p class="subtitle">CIBIL Score, Report & More</p>
+                </div>
+                <div class="price-section">
+                  <span class="price">₹550</span>
+                  <span class="sub-price">for 1 month</span>
+                </div>
+              </div>
+              <a href="https://myscore.cibil.com/CreditView/enrollShort_new.page?enterprise=CIBIL&offer=1M550RM" class="primary-btn yellow">Get started</a>
+            </div>
+          </div>
+          <p class="enquiry-price-extra">Already have a CIBIL account? <a href="https://myscore.cibil.com/CreditView/mobilelogin.page?enterprise=CIBIL">Log In</a></p>
+        </div>
+      </div>
+    </section>
+    <p class="enquiry-price-note">You are eligible for one FREE CIBIL Score & Report every calendar year.</p>
+    <section class="enquiry-features">
+      <div class="container">
+        <p class="enquiry-section-description big">Learn the key terms related to enquiries mentioned in this
+          notification.</p>
+        <div class="section-keywords">
+          <div class="section-keywords-row">
+            <div class="section-keywords-item">
+              <div class="section-keywords-item-icon yellow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <mask id="mask0_9487_1108" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
+                    height="24">
+                    <rect width="24" height="24" fill="#D9D9D9" />
+                  </mask>
+                  <g mask="url(#mask0_9487_1108)">
+                    <path
+                      d="M6.57215 19.5384L7.57215 15.5384H3.76465L4.13965 14.0384H7.94715L8.9664 9.96136H5.1589L5.5339 8.46136H9.3414L10.3414 4.46136H11.8221L10.8221 8.46136H14.9569L15.9569 4.46136H17.4376L16.4376 8.46136H20.2451L19.8701 9.96136H16.0626L15.0434 14.0384H18.8509L18.4759 15.5384H14.6684L13.6684 19.5384H12.1876L13.1876 15.5384H9.0529L8.0529 19.5384H6.57215ZM9.4279 14.0384H13.5626L14.5819 9.96136H10.4471L9.4279 14.0384Z"
+                      fill="#6F4116" />
+                  </g>
+                </svg>
+              </div>
+              <div class="section-keywords-item-content">
+                <p class="section-keywords-item-content-title">ECN (Enquiry Control Number)</p>
+                <p class="section-keywords-item-content-desc">A unique 9–10-digit number generated when the lender
+                  checks your CIBIL Score.</p>
+              </div>
+            </div>
+            <div class="section-keywords-item">
+              <div class="section-keywords-item-icon green">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                  <mask id="mask0_9487_1118" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25"
+                    height="24">
+                    <rect x="0.333496" width="24" height="24" fill="#D9D9D9" />
+                  </mask>
+                  <g mask="url(#mask0_9487_1118)">
+                    <path
+                      d="M11.2956 15.7692C11.2956 14.6372 11.426 13.7705 11.6868 13.1692C11.9477 12.5679 12.4923 11.9012 13.3206 11.1692C13.9654 10.5949 14.4542 10.074 14.7868 9.60669C15.1195 9.13936 15.2858 8.60952 15.2858 8.01719C15.2858 7.23136 15.0183 6.57819 14.4831 6.05769C13.9478 5.53719 13.2108 5.27694 12.2723 5.27694C11.416 5.27694 10.7493 5.50636 10.2723 5.96519C9.79551 6.42419 9.43334 6.93644 9.18584 7.50194L7.36084 6.69994C7.74934 5.74227 8.35576 4.94386 9.18009 4.30469C10.0044 3.66569 11.0352 3.34619 12.2723 3.34619C13.8877 3.34619 15.1309 3.80161 16.0021 4.71244C16.8733 5.62327 17.3088 6.70436 17.3088 7.95569C17.3088 8.73769 17.1393 9.42777 16.8003 10.0259C16.4612 10.6239 15.9468 11.2467 15.2571 11.8942C14.3891 12.6904 13.8516 13.3182 13.6446 13.7777C13.4374 14.2374 13.3338 14.9012 13.3338 15.7692H11.2956ZM12.2723 21.4999C11.8633 21.4999 11.5111 21.3522 11.2156 21.0567C10.9201 20.7612 10.7723 20.4089 10.7723 19.9999C10.7723 19.5909 10.9201 19.2387 11.2156 18.9432C11.5111 18.6477 11.8633 18.4999 12.2723 18.4999C12.6813 18.4999 13.0336 18.6477 13.3291 18.9432C13.6246 19.2387 13.7723 19.5909 13.7723 19.9999C13.7723 20.4089 13.6246 20.7612 13.3291 21.0567C13.0336 21.3522 12.6813 21.4999 12.2723 21.4999Z"
+                      fill="#1D653B" />
+                  </g>
+                </svg>
+              </div>
+              <div class="section-keywords-item-content">
+                <p class="section-keywords-item-content-title">Enquiry Purpose</p>
+                <p class="section-keywords-item-content-desc">The type of credit requested like home loan, personal loan
+                  or commercial loan.</p>
+              </div>
+            </div>
+            <div class="section-keywords-item">
+              <div class="section-keywords-item-icon blue">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                  <mask id="mask0_9487_1128" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25"
+                    height="24">
+                    <rect x="0.666992" width="24" height="24" fill="#D9D9D9" />
+                  </mask>
+                  <g mask="url(#mask0_9487_1128)">
+                    <path
+                      d="M15.3592 18C14.7169 18 14.1717 17.776 13.7237 17.328C13.2757 16.8798 13.0517 16.3346 13.0517 15.6923C13.0517 15.0499 13.2757 14.5048 13.7237 14.0568C14.1717 13.6088 14.7169 13.3848 15.3592 13.3848C16.0016 13.3848 16.5468 13.6088 16.995 14.0568C17.443 14.5048 17.667 15.0499 17.667 15.6923C17.667 16.3346 17.443 16.8798 16.995 17.328C16.5468 17.776 16.0016 18 15.3592 18ZM5.97474 21.5C5.46958 21.5 5.04199 21.325 4.69199 20.975C4.34199 20.625 4.16699 20.1974 4.16699 19.6923V6.30777C4.16699 5.8026 4.34199 5.37502 4.69199 5.02502C5.04199 4.67502 5.46958 4.50002 5.97474 4.50002H7.35924V2.38477H8.89774V4.50002H16.4747V2.38477H17.9747V4.50002H19.3592C19.8644 4.50002 20.292 4.67502 20.642 5.02502C20.992 5.37502 21.167 5.8026 21.167 6.30777V19.6923C21.167 20.1974 20.992 20.625 20.642 20.975C20.292 21.325 19.8644 21.5 19.3592 21.5H5.97474ZM5.97474 20H19.3592C19.4362 20 19.5067 19.9679 19.5707 19.9038C19.6349 19.8398 19.667 19.7693 19.667 19.6923V10.3078H5.66699V19.6923C5.66699 19.7693 5.69908 19.8398 5.76324 19.9038C5.82724 19.9679 5.89774 20 5.97474 20ZM5.66699 8.80777H19.667V6.30777C19.667 6.23077 19.6349 6.16026 19.5707 6.09626C19.5067 6.0321 19.4362 6.00002 19.3592 6.00002H5.97474C5.89774 6.00002 5.82724 6.0321 5.76324 6.09626C5.69908 6.16026 5.66699 6.23077 5.66699 6.30777V8.80777Z"
+                      fill="#5F5BA9" />
+                  </g>
+                </svg>
+              </div>
+              <div class="section-keywords-item-content">
+                <p class="section-keywords-item-content-title">Enquiry Date & Time</p>
+                <p class="section-keywords-item-content-desc">When the lender requested your credit history and CIBIL
+                  Score or MFI score.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="enquiry-belong">
+      <div class="container">
+        <h2 class="enquiry-section-title">Don’t recognise this enquiry?</h2>
+        <div class="enquiry-belong-row">
+          <div class="enquiry-belong-item">
+            <div class="enquiry-belong-item-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <mask id="mask0_9642_43998" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="32"
+                  height="32">
+                  <rect width="32" height="32" fill="#D9D9D9" />
+                </mask>
+                <g mask="url(#mask0_9642_43998)">
+                  <path
+                    d="M8.03034 23.0563C9.16367 22.2154 10.3983 21.5513 11.7343 21.064C13.0701 20.5769 14.4919 20.3333 15.9997 20.3333C17.5075 20.3333 18.9292 20.5769 20.265 21.064C21.601 21.5513 22.8357 22.2154 23.969 23.0563C24.7979 22.1452 25.4547 21.0905 25.9393 19.8923C26.424 18.6941 26.6663 17.3966 26.6663 16C26.6663 13.0444 25.6275 10.5278 23.5497 8.44998C21.4719 6.3722 18.9552 5.33331 15.9997 5.33331C13.0441 5.33331 10.5275 6.3722 8.44967 8.44998C6.3719 10.5278 5.33301 13.0444 5.33301 16C5.33301 17.3966 5.57534 18.6941 6.06001 19.8923C6.54467 21.0905 7.20145 22.1452 8.03034 23.0563ZM16 17C14.7827 17 13.7561 16.5822 12.9203 15.7466C12.0843 14.9109 11.6663 13.8843 11.6663 12.667C11.6663 11.4496 12.0841 10.4231 12.9197 9.58731C13.7555 8.75131 14.782 8.33331 15.9993 8.33331C17.2167 8.33331 18.2432 8.75109 19.079 9.58665C19.915 10.4224 20.333 11.449 20.333 12.6663C20.333 13.8836 19.9152 14.9102 19.0797 15.746C18.2439 16.582 17.2173 17 16 17ZM15.9997 28.6666C14.2408 28.6666 12.5908 28.3359 11.0497 27.6743C9.50856 27.0128 8.16801 26.1119 7.02801 24.9716C5.88779 23.8316 4.9869 22.4911 4.32534 20.95C3.66379 19.4089 3.33301 17.7589 3.33301 16C3.33301 14.2411 3.66379 12.5911 4.32534 11.05C4.9869 9.50887 5.88779 8.16831 7.02801 7.02831C8.16801 5.88809 9.50856 4.9872 11.0497 4.32565C12.5908 3.66409 14.2408 3.33331 15.9997 3.33331C17.7586 3.33331 19.4086 3.66409 20.9497 4.32565C22.4908 4.9872 23.8313 5.88809 24.9713 7.02831C26.1116 8.16831 27.0125 9.50887 27.674 11.05C28.3356 12.5911 28.6663 14.2411 28.6663 16C28.6663 17.7589 28.3356 19.4089 27.674 20.95C27.0125 22.4911 26.1116 23.8316 24.9713 24.9716C23.8313 26.1119 22.4908 27.0128 20.9497 27.6743C19.4086 28.3359 17.7586 28.6666 15.9997 28.6666ZM15.9997 26.6666C17.203 26.6666 18.3632 26.4731 19.4803 26.086C20.5975 25.6986 21.5893 25.1572 22.456 24.4616C21.5893 23.7914 20.6103 23.2692 19.519 22.895C18.4275 22.5205 17.2543 22.3333 15.9997 22.3333C14.745 22.3333 13.5698 22.5183 12.474 22.8883C11.3782 23.2585 10.4013 23.783 9.54334 24.4616C10.41 25.1572 11.4019 25.6986 12.519 26.086C13.6361 26.4731 14.7963 26.6666 15.9997 26.6666ZM15.9997 15C16.663 15 17.2177 14.7769 17.6637 14.3306C18.1099 13.8846 18.333 13.33 18.333 12.6666C18.333 12.0033 18.1099 11.4486 17.6637 11.0026C17.2177 10.5564 16.663 10.3333 15.9997 10.3333C15.3363 10.3333 14.7817 10.5564 14.3357 11.0026C13.8895 11.4486 13.6663 12.0033 13.6663 12.6666C13.6663 13.33 13.8895 13.8846 14.3357 14.3306C14.7817 14.7769 15.3363 15 15.9997 15Z"
+                    fill="#005F8D" />
+                </g>
+              </svg>
+            </div>
+            <div class="enquiry-belong-item-content">
+              <p class="enquiry-belong-item-content-title">Contact the lender</p>
+              <p class="enquiry-belong-item-content-desc">Lenders appoint a principal nodal officer (PNO) expected to
+                oversee the overall complaints management process of the bank. You can access this detail <a
+                  href="https://www.cibil.com/nodal-officer-list">here.</a></p>
+            </div>
+          </div>
+          <div class="enquiry-belong-item">
+            <div class="enquiry-belong-item-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="none">
+                <mask id="mask0_9642_44006" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="33"
+                  height="32">
+                  <rect x="0.333008" width="32" height="32" fill="#D9D9D9" />
+                </mask>
+                <g mask="url(#mask0_9642_44006)">
+                  <path
+                    d="M16.3333 22.282C16.6384 22.282 16.8942 22.1788 17.1007 21.9724C17.3071 21.7659 17.4103 21.5101 17.4103 21.205C17.4103 20.8999 17.3071 20.6441 17.1007 20.4377C16.8942 20.2315 16.6384 20.1284 16.3333 20.1284C16.0282 20.1284 15.7724 20.2315 15.566 20.4377C15.3596 20.6441 15.2563 20.8999 15.2563 21.205C15.2563 21.5101 15.3596 21.7659 15.566 21.9724C15.7724 22.1788 16.0282 22.282 16.3333 22.282ZM15.3333 17.641H17.3333V9.58969H15.3333V17.641ZM11.6153 27.3334L5 20.724V11.282L11.6093 4.66669H21.0513L27.6667 11.276V20.718L21.0573 27.3334H11.6153ZM12.4667 25.3334H20.2L25.6667 19.8667V12.1334L20.2 6.66669H12.4667L7 12.1334V19.8667L12.4667 25.3334Z"
+                    fill="#005F8D" />
+                </g>
+              </svg>
+            </div>
+            <div class="enquiry-belong-item-content">
+              <p class="enquiry-belong-item-content-title">Raise a dispute with CIBIL</p>
+              <p class="enquiry-belong-item-content-desc">You can initiate a dispute with CIBIL and we will verify the
+                details in our records. <a href="https://www.cibil.com/company-dispute-resolution">Click here</a></p>
+            </div>
+          </div>
+          <div class="enquiry-belong-item">
+            <div class="enquiry-belong-item-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="none">
+                <mask id="mask0_9642_44014" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="33"
+                  height="32">
+                  <rect x="0.666992" width="32" height="32" fill="#D9D9D9" />
+                </mask>
+                <g mask="url(#mask0_9642_44014)">
+                  <path
+                    d="M6.41033 26C5.73678 26 5.16667 25.7667 4.7 25.3C4.23333 24.8333 4 24.2632 4 23.5897V8.41033C4 7.73678 4.23333 7.16667 4.7 6.7C5.16667 6.23333 5.73678 6 6.41033 6H26.923C27.5966 6 28.1667 6.23333 28.6333 6.7C29.1 7.16667 29.3333 7.73678 29.3333 8.41033V23.5897C29.3333 24.2632 29.1 24.8333 28.6333 25.3C28.1667 25.7667 27.5966 26 26.923 26H6.41033ZM16.6667 16.7437L6 9.923V23.5897C6 23.7094 6.03844 23.8078 6.11533 23.8847C6.19222 23.9616 6.29056 24 6.41033 24H26.923C27.0428 24 27.1411 23.9616 27.218 23.8847C27.2949 23.8078 27.3333 23.7094 27.3333 23.5897V9.923L16.6667 16.7437ZM16.6667 14.6667L27.1283 8H6.205L16.6667 14.6667ZM6 9.923V8V23.5897C6 23.7094 6.03844 23.8078 6.11533 23.8847C6.19222 23.9616 6.29056 24 6.41033 24H6V9.923Z"
+                    fill="#005F8D" />
+                </g>
+              </svg>
+            </div>
+            <div class="enquiry-belong-item-content">
+              <p class="enquiry-belong-item-content-title">Need help?</p>
+              <p class="enquiry-belong-item-content-desc">Alternatively, if you are sure that the enquiry does not
+                belong to you, <a href="https://www.cibil.com/contact-us">click here</a> to write to us. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="video-shower">
+      <div class="d-flex justify-content-between  align-items-center">
+
+
+        
+ <iframe width="100%" height="100%" src="https://www.youtube.com/embed/HuCJuXSSzH0"
+          title="Ep 03 - Loan and Credit Card Explained. Do they affect your CIBIL Score?" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 12px;">
+        </iframe>
+        
+        <!-- <a src="https://www.youtube.com/watch?v=HuCJuXSSzH0" alt="" class="rounded-4"> -->
+       
+
+        <p>Watch this video to learn more about how loan and credit card applications affect your score.</p>
+      </div>
+    </section>
+    <!-- blog section start -->
+    <section class="enquiry-blogs">
+      <div class="container">
+        <h2 class="enquiry-section-title">Recommended Reads</h2>
+        <p class="enquiry-section-description">Learn more about improving your CIBIL score and the role it plays in your
+          financial development.</p>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-md-0 mb-3">
+            <div class="enquiry-blogs-image">
+              <img class="img-fluid" src="https://www.cibil.com/content/dam/cibil/consumer/enq26/blog-1.png" alt="">
+            </div>
+            <p class="enquiry-blogs-title">Why Did I Get an Enquiry on My CIBIL Report?</p>
+            <p class="enquiry-blogs-desc">You may have recently checked your CIBIL Report and noticed an enquiry you
+              don't recognize. Credit enquiries happen when a bank/financial institution has accessed your CIBIL Report,
+              usually in connection with a new credit card or loan application.</p>
+            <!-- Add link for blog below -->
+            <a href="https://www.cibil.com/blog/why-did-I-get-an-enquiry-on-my-credit-report"
+              class="enquiry-blogs-link">Read More</a>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-md-0 mb-3">
+            <div class="enquiry-blogs-image">
+              <img class="img-fluid" src="https://www.cibil.com/content/dam/cibil/consumer/enq26/blog-2.png" alt="">
+            </div>
+            <p class="enquiry-blogs-title">What To Do If You Don't Recognize a credit enquiry On Your CIBIL report?</p>
+            <p class="enquiry-blogs-desc">You check your CIBIL report and see a credit enquiry from a bank/financial
+              institution that does not belong to you. </p>
+            <!-- Add link for blog below -->
+            <a href="https://www.cibil.com/blog/why-did-I-get-an-enquiry-on-my-credit-report"
+              class="enquiry-blogs-link">Read More</a>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="enquiry-blogs-image">
+              <img class="img-fluid" src="https://www.cibil.com/content/dam/cibil/consumer/enq26/blob 3.png" alt="">
+            </div>
+            <p class="enquiry-blogs-title">A Guide To CIBIL Dispute Resolution Process</p>
+            <p class="enquiry-blogs-desc">Think of your CIBIL Report as your financial report card. It’s an official
+              record, with data from banks and financial institutions, tracking your loan</p>
+            <!-- Add link for blog below -->
+            <a href="https://www.cibil.com/blog/what-to-do-if-you-dont-recognize-a-credit-enquiry-on-your-CIBIL-Report"
+              class="enquiry-blogs-link">Read More</a>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <!-- blog section end -->
+  </main>
+
+  <script>
+        const tabMapping = {
+      free: "https://myscore.cibil.com/CreditView/enrollShort_new.page?enterprise=CIBIL&offer=FACRA",
+      starter: "https://myscore.cibil.com/CreditView/enrollShort_new.page?enterprise=CIBIL&offer=1DPCIRO&_gl=1*6jo6vu*_gcl_au*ODI4ODA2ODg1LjE3Njk3NTEyMDE.*_ga*MTYxNDU0MTc0Mi4xNzY5NzUxMjAy*_ga_WVCRSGNX36*czE3NzA4MDEwODQkbzUkZzEkdDE3NzA4MDExMzYkajgkbDAkaDA.*_ga_GGL6JJ79K2*czE3NzA4MDA5OTUkbzckZzEkdDE3NzA4MDExOTQkajYwJGwwJGgw&_ga=2.26196277.985886630.1770800996-1614541742.1769751202",
+      basic: "https://myscore.cibil.com/CreditView/enrollShort_new.page?enterprise=CIBIL&offer=1M550RM&_gl=1*1va6coa*_gcl_au*ODI4ODA2ODg1LjE3Njk3NTEyMDE.*_ga*MTYxNDU0MTc0Mi4xNzY5NzUxMjAy*_ga_WVCRSGNX36*czE3NzA4MDEwODQkbzUkZzEkdDE3NzA4MDEyOTUkajMxJGwwJGgw*_ga_GGL6JJ79K2*czE3NzA4MDA5OTUkbzckZzEkdDE3NzA4MDEyOTUkajMzJGwwJGgw&_ga=2.26196277.985886630.1770800996-1614541742.1769751202"
+    };
+
+    let currentTab = 'free';
+
+    function updateSubscribeButton(url) {
+      const buttonRef = document.getElementById('subscribe-btn');
+      if (buttonRef) {
+        buttonRef.href = url;
+      }
+    }
+
+    function redirectTo() {
+      const redirectUrl = tabMapping[currentTab];
+      console.log("Redirecting to:", redirectUrl);
+      if (redirectUrl) {
+        window.location.href = redirectUrl;
+      }
+    }
+
+    function setCurrentTab(name) {
+      currentTab = name;
+      console.log(currentTab, "Current Tab");
+      const redirectUrl = tabMapping[name];
+      updateSubscribeButton(redirectUrl);
+    }
+    
+    // Initialize button on load
+    window.onload = function() {
+        if(tabMapping[currentTab]) {
+            updateSubscribeButton(tabMapping[currentTab]);
+        }
+    };
+  </script>
+</body>
+
+</html>
